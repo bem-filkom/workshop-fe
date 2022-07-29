@@ -1,0 +1,472 @@
+@import "../../style/base.scss";
+
+.webinar-section {
+  min-height: 500px;
+  height: auto;
+  position: relative;
+  padding-bottom: 5rem;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #010088 0%, #b183ff 100%);
+  @include respon(phone-pot) {
+    padding-top: 3rem;
+  }
+  @include respon(phone-land) {
+    padding-top: 3rem;
+  }
+  .webinar-regist {
+    overflow: hidden;
+    padding-top: 2rem;
+    @include respon(phone-pot) {
+      padding-bottom: 2rem;
+    }
+    @include respon(phone-land) {
+      padding-bottom: 2rem;
+    }
+    .title {
+    }
+    .content1 {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      @include respon(phone-pot) {
+        flex-direction: column;
+      }
+      @include respon(phone-land) {
+        flex-direction: column;
+      }
+      .img-content {
+        width: max-content;
+        text-align: center;
+        .imgContent {
+          object-fit: contain;
+          width: 300px;
+          margin-right: 2rem;
+          @include respon(phone-pot) {
+            width: 150px;
+            margin-bottom: 2rem;
+            margin-right: 0;
+          }
+          @include respon(phone-land) {
+            margin-bottom: 2rem;
+            margin-right: 0;
+            width: 200px;
+          }
+          @include respon(tb-pot) {
+            width: 250px;
+            margin-right: 2rem;
+          }
+        }
+      }
+      .btn {
+      }
+    }
+  }
+  .title {
+    position: relative;
+    z-index: 1;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-family: trueno;
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 102px;
+    text-align: center;
+    @include respon(phone-pot) {
+      margin-top: 0rem;
+    }
+    @include respon(phone-land) {
+      margin-top: 2rem;
+    }
+    @include respon(tb-pot) {
+      margin-top: 4rem;
+    }
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    @include respon(phone-pot) {
+      align-items: center;
+      flex-direction: column;
+    }
+    @include respon(phone-land) {
+      align-items: center;
+      flex-direction: column;
+    }
+    @include respon(tb-pot) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .box1 {
+      margin: 0 40px;
+      width: 50%;
+      font-family: Poppins;
+      font-style: normal;
+      height: auto;
+      padding-bottom: 2rem;
+      display: flex;
+      text-align: center;
+      padding-top: 2rem;
+      flex-direction: column;
+      // justify-content: center;
+      color: white;
+
+      background: linear-gradient(
+        180deg,
+        #a74ded 0%,
+        rgba(103, 32, 158, 0.7) 100%
+      );
+      box-shadow: 20px 44px 32px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      @include respon(phone-pot) {
+        margin: 4rem 40px;
+        width: 90%;
+      }
+      @include respon(phone-land) {
+        margin: 4rem 40px;
+        width: 80%;
+      }
+      @include respon(tb-pot) {
+        margin: 4rem 40px;
+      }
+      .titlenya {
+        padding-bottom: 1rem;
+      }
+      .wrapper-content {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include respon(phone-pot) {
+          flex-direction: column;
+        }
+        @include respon(phone-land) {
+          flex-direction: column;
+        }
+        // @include respon(tb-pot) {
+        //   flex-direction: column;
+        // }
+        .people-webinar {
+          width: 100%;
+
+          .people-webinar1 {
+            // object-fit: contain;
+            // width: 100px;
+          }
+        }
+        .time-webinar {
+          margin-top: 2.5rem;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          @include respon(phone-pot) {
+            align-items: center;
+            flex-direction: column;
+          }
+          @include respon(phone-land) {
+            align-items: center;
+          }
+          .card-content {
+            margin-bottom: 0.5rem;
+            display: flex;
+            width: fit-content;
+            // border: 1px solid black;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              margin: 0.2rem 0.3rem 0.2rem 0.7rem;
+            }
+          }
+        }
+      }
+    }
+    .box2 {
+      margin: 0 40px;
+      width: 50%;
+      font-family: Poppins;
+      font-style: normal;
+      height: auto;
+      padding-bottom: 2rem;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      padding-top: 2rem;
+      justify-content: center;
+      color: white;
+
+      background: linear-gradient(
+        180deg,
+        #a74ded 0%,
+        rgba(103, 32, 158, 0.7) 100%
+      );
+      box-shadow: 20px 44px 32px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      @include respon(phone-pot) {
+        margin: 4rem 40px;
+        width: 90%;
+      }
+      @include respon(phone-land) {
+        width: 80%;
+      }
+      @include respon(tb-pot) {
+        margin: 4rem 40px;
+      }
+      .titlenya {
+        padding-bottom: 1rem;
+      }
+      .wrapper-contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        @include respon(phone-pot) {
+          flex-direction: column;
+        }
+        @include respon(phone-land) {
+          flex-direction: column;
+        }
+        // @include respon(tb-pot) {
+        //   flex-direction: column;
+        // }
+        .people-webinar {
+          width: 100%;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          margin-bottom: 2rem;
+          flex-direction: row;
+          @include respon(phone-pot) {
+            flex-direction: column;
+          }
+          @include respon(phone-land) {
+            flex-direction: column;
+          }
+          @include respon(tb-pot) {
+            flex-direction: column;
+          }
+          .people1 {
+            width: 50%;
+
+            @include respon(phone-pot) {
+              margin-bottom: 2rem;
+              width: 100%;
+            }
+            @include respon(phone-land) {
+              width: 100%;
+              margin-bottom: 2rem;
+            }
+            @include respon(tb-pot) {
+              width: 100%;
+            }
+          }
+        }
+        .time-webinar {
+          margin-top: 2.5rem;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          @include respon(phone-pot) {
+            align-items: center;
+            flex-direction: column;
+          }
+          @include respon(phone-land) {
+            align-items: center;
+          }
+          .card-content {
+            margin-bottom: 0.5rem;
+            display: flex;
+            width: fit-content;
+            // border: 1px solid black;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              margin: 0.2rem 0.3rem 0.2rem 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .circle {
+    background-image: url("../../assets/img/webinar/circleWee.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 120%;
+    height: 50%;
+    top: 350px;
+    right: 0;
+    left: -200px;
+    position: absolute;
+    z-index: 0;
+    @include respon(phone-pot) {
+      top: 250px;
+      left: -60px;
+      height: 20%;
+    }
+    @include respon(phone-land) {
+      top: 350px;
+      left: -100px;
+      height: 20%;
+    }
+    @include respon(tb-pot) {
+      top: 350px;
+      left: -150px;
+      height: 30%;
+    }
+  }
+}
+
+.flashback-section {
+  background: linear-gradient(160.56deg, #4c2db7 43.27%, #010088 93.03%);
+  // height: 200vh;
+  width: 100%;
+  .background {
+    height: auto;
+    padding: 10rem 0 20rem 0;
+    background: linear-gradient(180deg, #b183ff 0%, rgba(17, 13, 148, 0) 100%);
+    // box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .title {
+      position: relative;
+      z-index: 1;
+      font-family: trueno;
+      color: white;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 72px;
+      line-height: 102px;
+      text-align: center;
+      @include respon(phone-pot) {
+        margin-top: 0rem;
+      }
+      @include respon(phone-land) {
+        margin-top: 2rem;
+      }
+      @include respon(tb-pot) {
+        margin-top: 4rem;
+      }
+    }
+    .fb-wrapper {
+      .box3 {
+        height: 357px;
+        width: 50%;
+        margin: 3rem auto;
+        background: #c4c4c4;
+        box-shadow: 20px 44px 32px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+        background-image: url("../../assets/img/webinar/flashback3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include respon(phone-pot) {
+          width: 90%;
+        }
+        @include respon(phone-land) {
+          width: 80%;
+        }
+        @include respon(tb-pot) {
+          width: 80%;
+        }
+      }
+      .contentssss {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        @include respon(phone-pot) {
+          flex-direction: column;
+        }
+        @include respon(phone-land) {
+          flex-direction: column;
+        }
+        @include respon(tb-pot) {
+          flex-direction: column;
+        }
+        .box1 {
+          height: 357px;
+          width: 50%;
+          margin: 3rem 2rem 1rem 2rem;
+          background: #c4c4c4;
+          box-shadow: 20px 44px 32px 5px rgba(0, 0, 0, 0.25);
+          border-radius: 40px;
+          background-image: url("../../assets/img/webinar/flashback1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          @include respon(phone-pot) {
+            width: 90%;
+          }
+          @include respon(phone-land) {
+            width: 80%;
+          }
+          @include respon(tb-pot) {
+            width: 80%;
+          }
+        }
+        .box2 {
+          height: 357px;
+          width: 50%;
+          margin: 3rem 2rem 1rem 2rem;
+          background: #c4c4c4;
+          box-shadow: 20px 44px 32px 5px rgba(0, 0, 0, 0.25);
+          border-radius: 40px;
+          background-image: url("../../assets/img/webinar/flashback2.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          @include respon(phone-pot) {
+            width: 90%;
+          }
+          @include respon(phone-land) {
+            width: 80%;
+          }
+          @include respon(tb-pot) {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .buttons {
+      padding-top: 5rem;
+      position: relative;
+      z-index: 1;
+      margin: 2rem 0 2rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    .home {
+      background-image: url("../../assets/img/webinar/house.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 302px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      @include respon(phone-pot) {
+        height: 4%;
+      }
+      @include respon(phone-land) {
+        height: 8%;
+      }
+      @include respon(tb-pot) {
+        height: 8%;
+      }
+    }
+  }
+}

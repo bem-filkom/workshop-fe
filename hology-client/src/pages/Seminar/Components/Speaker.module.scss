@@ -1,0 +1,36 @@
+@import "../../../style/base.scss";
+
+.item {
+  img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    @include debug(white);
+
+    @include respon(desktop-mid) {
+      width: 280px;
+      height: 280px;
+    }
+    @include respon(desktop-small) {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  .text {
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    font-weight: $semi-bold;
+    margin-bottom: 15px;
+
+    @include respon(desktop-mid) {
+      font-size: 30px;
+    }
+    @include respon(desktop-small) {
+      font-size: 22px;
+    }
+  }
+}

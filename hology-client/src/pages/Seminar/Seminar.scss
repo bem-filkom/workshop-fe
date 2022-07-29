@@ -1,0 +1,206 @@
+@import "../../style/base.scss";
+
+section {
+  overflow: hidden;
+}
+
+.accent {
+  color: $color-accent;
+}
+
+.test {
+  width: 1024px;
+  height: 50px;
+  margin: 0 auto;
+  @include debug(red);
+}
+.test-2 {
+  width: 1400px;
+  height: 50px;
+  margin: 0 auto;
+  @include debug(red);
+}
+.test-3 {
+  width: 1800px;
+  height: 50px;
+  margin: 0 auto;
+  @include debug(red);
+}
+
+.hero {
+  width: 100vw;
+  padding: 220px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../../assets/img/seminar/hero-img.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  @include respon(desktop-mid) {
+    padding: 180px 0;
+  }
+  @include respon(desktop-small) {
+    padding: 140px 0;
+  }
+
+  .info {
+    margin: 0 auto;
+    width: 1400px;
+    max-width: 90%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .info-title {
+      color: $color-white;
+      font-size: 75px;
+      font-weight: $semi-bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      @include respon(desktop-small) {
+        font-size: 50px;
+      }
+    }
+
+    .info-text {
+      color: $color-white;
+      font-size: 24px;
+      font-weight: $semi-bold;
+      margin-bottom: 40px;
+
+      @include respon(desktop-small) {
+        font-size: 18px;
+      }
+    }
+
+    .button-container {
+      // @include debug(red);
+      margin: 0 auto;
+      width: 500px;
+
+      display: flex;
+      justify-content: space-between;
+
+      @include respon(desktop-small) {
+        width: 350px;
+      }
+
+      button {
+        @include button;
+      }
+    }
+
+    .date-container {
+      text-align: left;
+      margin-top: 150px;
+
+      // @include debug(red);
+
+      display: flex;
+      justify-content: space-between;
+
+      @include respon(desktop-small) {
+        margin-top: 100px;
+      }
+
+      .date-item {
+        width: 400px;
+        // @include debug(white);
+
+        @include respon(desktop-small) {
+          width: 300px;
+        }
+
+        h4 {
+          font-size: 24px;
+          font-weight: $semi-bold;
+          color: $color-white;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+
+          @include respon(desktop-small) {
+            font-size: 16px;
+          }
+        }
+
+        h2 {
+          font-size: 60px;
+          font-weight: $semi-bold;
+          color: $color-accent;
+          line-height: 1.2em;
+
+          @include respon(desktop-small) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+  .vector {
+    width: 25vw;
+    height: 350px;
+    background-image: url("../../assets/img/background-decorations/bg-decoration-2.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 120px;
+
+    @include respon(desktop-mid) {
+      width: 22vw;
+      height: 300px;
+    }
+    @include respon(desktop-small) {
+      width: 20vw;
+      height: 250px;
+    }
+  }
+  .vector.left {
+    left: -20px;
+  }
+  .vector.right {
+    right: -20px;
+    transform: scaleX(-1);
+  }
+}
+
+.speaker {
+  // height: 100vh;
+  padding: 200px 0;
+
+  @include respon(desktop-mid) {
+    padding: 120px 0;
+  }
+  @include respon(desktop-small) {
+    padding: 100px;
+  }
+
+  .speaker-title {
+    text-align: center;
+    color: $color-white;
+    font-size: 64px;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+
+    @include respon(desktop-small) {
+      font-size: 45px;
+    }
+  }
+
+  .speaker-container {
+    // @include debug(red);
+    max-width: 90%;
+    width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include respon(desktop-small) {
+      width: 1000px;
+    }
+  }
+}

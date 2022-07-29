@@ -1,0 +1,84 @@
+@import "../../style/base.scss";
+
+.button {
+  padding: 15px 20px;
+  background-color:none ;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  font-size: $header-xs;
+  font-family: coolvetica;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  min-width: 200px;
+}
+
+.margin-right {
+  margin-right: 2rem;
+}
+
+.margin-left {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+
+.primary {
+  color: white;
+  background-color: #FF9E49;
+  &:hover,
+  :active {
+    color: white;
+    background-color: lightsalmon;
+    box-shadow: none;
+  }
+}
+
+.secondary {
+  background: linear-gradient(96.02deg, #7a1cd0 0%, #2af6ff 100%);
+  border-radius: 40px;
+  color: white;
+  &:hover,
+  :active {
+    background: linear-gradient(96.02deg, #7a1cd0 0%, #2af6ff 100%);
+    box-shadow: none;
+  }
+}
+
+
+
+.ternary {
+  color: white;
+  background: #956af7;
+  box-shadow: 10px 12px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 70px;
+
+  &:hover,
+  :active {
+    background: #8a5ef1;
+    box-shadow: none;
+  }
+}
+
+.quarternary {
+  background: linear-gradient(0deg, #956af7, #956af7);
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 12px 44px 32px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 38px;
+  color: white;
+
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+
+  &:hover,
+  :active {
+    box-shadow: none;
+  }
+}

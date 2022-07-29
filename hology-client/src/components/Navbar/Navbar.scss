@@ -1,0 +1,161 @@
+@import "../../style/base.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 0 10%;
+  z-index: 99;
+  background-color: $color-blue;
+  color: $color-cream;
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+  justify-content: space-between;
+  font-family: trueno;
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .logo-text {
+    object-fit: contain;
+    height: 40px;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+
+    .line {
+      width: 3px;
+      height: 30px;
+      background-color: $color-accent;
+      border-radius: 10px;
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+
+  }
+
+  &__link {
+    margin: 1em;
+    font-size: 1rem;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid $color-accent;
+      padding-bottom: 5px;
+    }
+
+    &--active {
+      border-bottom: 2px solid $color-accent;
+      padding-bottom: 5px;
+      color: $color-accent;
+      transition: border-bottom 0.5s ease-in-out;
+    }
+  }
+}
+
+.navbar-color {
+  background-color: $color-blue;
+
+  color: $color-cream;
+  box-shadow: 0 4px 20px 0px rgba(22, 102, 114, 0.3);
+}
+
+.Burger {
+  display: none;
+  grid-area: burger;
+  margin: 2px 0 0 0;
+  padding: 0;
+  justify-self: end;
+  font-size: 40px;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.1s;
+}
+.Burger:active {
+  transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+  .options {
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: black, $alpha: 0.8);
+
+    .line {
+      display: none;
+    }
+
+    .section-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .navbar__link {
+    margin: 1rem 0;
+    font-size: 1.8rem;
+  }
+  .Burger {
+    display: inline;
+    color: white;
+  }
+}
+
+.NavAnimation-enter {
+  opacity: 0;
+  transform: translatex(-100%);
+}
+.NavAnimation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 350ms, transform 350ms;
+}
+.NavAnimation-exit {
+  opacity: 1;
+}
+.NavAnimation-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 350ms, transform 350ms;
+}
+
+.icon-hamburger {
+  color: white;
+  width: 40px;
+  height: 40px;
+}

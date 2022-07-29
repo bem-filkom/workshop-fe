@@ -1,0 +1,99 @@
+@import "../../style/base.scss";
+
+.card-body {
+  background-image: url("../../assets/img/webinar-card/webinar-bg.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  border-radius: 3rem;
+  background-size: cover;
+  min-height: 360px;
+  padding: 2rem;
+  margin-top: 3rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  
+  .description {
+    width: 65%;
+    @include respon(phone-pot) {
+      width: 100%;
+    }
+    @include respon(phone-land) {
+      width: 100%;
+    }
+    @include respon(tb-pot) {
+      width: 100%;
+    }
+    .card-content {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .regist-btn {
+    background-color: #c293fc;
+    width: fit-content;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    margin-left: auto;
+    margin-right: 3rem;
+    transition: 300ms;
+    cursor: pointer;
+    @include respon(phone-pot) {
+      margin: 0 auto;
+    }
+    @include respon(phone-land) {
+      margin: 0 auto;
+    }
+    &:hover {
+      background-color: #a36ae9;
+    }
+  }
+}
+
+.card-body.expired {
+  opacity: 0.4;
+  .regist-btn {
+    display: none;
+  }
+}
+
+.card-body-verif {
+  background-image: url("../../assets/img/webinar-card/webinar-bg.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  border-radius: 3rem;
+  background-size: cover;
+  min-height: 360px;
+  padding: 2rem;
+  margin-top: 3rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  .title-verif{
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  .regist-btn {
+    background-color: #c293fc;
+    width: fit-content;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    transition: 300ms;
+    cursor: pointer;
+    @include respon(phone-pot) {
+      margin: 0 auto;
+    }
+    @include respon(phone-land) {
+      margin: 0 auto;
+    }
+    &:hover {
+      background-color: #a36ae9;
+    }
+  }
+}

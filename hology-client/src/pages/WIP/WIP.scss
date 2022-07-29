@@ -1,0 +1,133 @@
+@import "../../style/base.scss";
+
+.academy-section {
+  color: white;
+  min-height: 500px;
+  height: auto;
+  position: relative;
+  padding: 10% 10% 5%;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #8c69e7 0%, #0a078e 100%);
+  @include respon(phone-pot) {
+    padding: 40% 10% 10%;
+  }
+  @include respon(phone-land) {
+    padding: 30% 10% 10%;
+  }
+  @include respon(tb-pot) {
+    padding: 25% 10% 10%;
+  }
+  .title {
+    font-family: Trueno;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .logo-content {
+    // width: max-content;
+
+    background: #ffffff;
+    border-radius: 55px;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    @include respon(phone-pot) {
+      margin-bottom: 2rem;
+      width: 100%;
+      padding: 0.5rem 0 0.5rem 0;
+    }
+    @include respon(phone-land) {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    @include respon(tb-pot) {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    img {
+      // object-fit: contain;
+      @include respon(phone-pot) {
+        width: 20%;
+      }
+    }
+  }
+  .description {
+    font-size: larger;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .registration {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include respon(phone-pot) {
+      flex-direction: column;
+    }
+    @include respon(phone-land) {
+      flex-direction: column;
+    }
+    .img-content {
+      width: max-content;
+      text-align: center;
+      margin: 0 5rem 0 0;
+      @include respon(phone-pot) {
+        margin: 0 0 4rem 0;
+      }
+      @include respon(phone-land) {
+        margin: 0 0 4rem 0;
+      }
+      .imgContent {
+        object-fit: contain;
+        width: 300px;
+        @include respon(phone-pot) {
+          width: 150px;
+        }
+        @include respon(phone-land) {
+          width: 200px;
+        }
+        @include respon(tb-pot) {
+          width: 250px;
+        }
+      }
+    }
+    .btn {
+    }
+  }
+}
+
+.wr-timeline {
+  background: linear-gradient(180deg, #0a078e 0%, #2d08e0 100%);
+  padding: 5rem 0 5rem 0;
+  color: white;
+  .title {
+    font-family: Trueno;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .img-time {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 3rem;
+    .wr-timeline-img {
+      object-fit: contain;
+      width: 50rem;
+      @include respon(phone-pot) {
+        width: 250px;
+      }
+      @include respon(phone-land) {
+        width: 400px;
+      }
+      @include respon(tb-pot) {
+        width: 500px;
+      }
+    }
+  }
+}

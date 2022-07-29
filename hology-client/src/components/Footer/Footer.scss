@@ -1,0 +1,129 @@
+@import "../../style/base.scss";
+
+.section-home-full-7 {
+  // @include heightMinusNavbar;
+  padding: 10% 10%;
+  height: 1000px;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: url("../../assets/img/homepage/bg7.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include respon(phone-pot) {
+    height: 1600px;
+  }
+  @include respon(phone-land) {
+    height: 1600px;
+  }
+  @include respon(tb-pot) {
+  }
+  .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-bottom: 3px solid white;
+    padding-bottom: 0.5rem;
+    @include respon(phone-pot) {
+      align-items: center;
+      flex-direction: column;
+    }
+    @include respon(phone-land) {
+      align-items: center;
+      flex-direction: column;
+    }
+    @include respon(tb-pot) {
+    }
+    a {
+      color: white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: 300ms;
+      @include respon(phone-pot) {
+        margin-bottom: 1rem;
+      }
+      @include respon(phone-land) {
+        margin-bottom: 1rem;
+      }
+      &:hover {
+        color: rgb(225, 122, 243);
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    .logo {
+      margin-top: 4rem;
+    }
+    .text {
+      text-align: center;
+      // color: blue;
+      .title {
+        font-family: trueno;
+        font-size: 3.2rem;
+        line-height: 71px;
+        padding-top: 2rem;
+        @include respon(phone-pot) {
+          font-size: 2.5rem;
+        }
+      }
+      .description1 {
+        padding: 1rem 0 3rem 0;
+        font-size: 2rem;
+        font-family: "Bebas Neue", cursive;
+        color: white;
+        @include respon(phone-pot) {
+          font-size: 1.5rem;
+        }
+      }
+      .description2 {
+        font-family: Coolvetica;
+        font-size: 3rem;
+        color: white;
+        padding-bottom: 2rem;
+        @include respon(phone-pot) {
+          font-size: 2.6rem;
+        }
+      }
+    }
+    .sosmed {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      grid-gap: 3rem;
+      text-align: center;
+      @include respon(phone-pot) {
+        grid-template-columns: auto auto;
+      }
+      @include respon(phone-land) {
+        grid-template-columns: auto auto auto;
+      }
+      .sosmed1 {
+        padding-top: 1rem;
+      }
+    }
+  }
+  .to-top {
+    font-family: Coolvetica;
+    font-size: 1.5rem;
+    margin-top: 13rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
+  .watermark {
+    font-family: "Bebas Neue", cursive;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

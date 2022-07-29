@@ -1,0 +1,54 @@
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+.paragraph {
+  color: #f8f8f8;
+  font-weight: 100;
+  font-size: 1.2rem;
+  word-spacing: 2px;
+  letter-spacing: 0.1px;
+  line-height: 1.5em;
+}
+
+.paragraph-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.paragraph-large {
+  font-size: 2rem;
+  word-spacing: 5px;
+  line-height: 32px;
+}
+
+.paragraph.justify {
+  text-align: justify !important;
+}
+/*# sourceMappingURL=Paragraph.css.map */
