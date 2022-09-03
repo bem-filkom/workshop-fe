@@ -1,2 +1,0 @@
-# hology-frontend
-Frontend Hology
