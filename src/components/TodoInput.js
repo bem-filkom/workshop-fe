@@ -8,7 +8,6 @@ const TodoInput = (props) => {
   const usersHandler = (event) => {
     event.preventDefault();
     props.todoinput(addTodoList);
-    console.log(addTodoList);
     setAddTodoList("");
   };
 

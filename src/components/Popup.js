@@ -9,10 +9,16 @@ const Popup = (props) => {
     e.preventDefault();
     props.onEdit(editTodolist);
     setEditTodolist("");
+    props.onExit();
   }
 
   const editInputHandler = (e)=>{
     setEditTodolist(e.target.value)
+  }
+
+  const deleteHandler = () =>{
+    props.onDeletePopup();
+    props.onExit();
   }
 
   return (
@@ -46,7 +52,7 @@ const Popup = (props) => {
                 EDIT
               </button>
               <button
-                onClick={props.onDeletePopup}
+                onClick={deleteHandler}
                 className="rounded bg-[#FF5454] py-2 px-12 font-semibold"
               >
                 DELETE

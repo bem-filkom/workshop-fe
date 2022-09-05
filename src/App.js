@@ -14,18 +14,15 @@ function App() {
     });
   };
 
-  const deleteItemHandler = (newKey) =>{
-    setTodoList(prevList => {
-      const updatedTodo = prevList.filter(id => id.key !== newKey);
-      return(updatedTodo);
-    })
+  const changeTodoListHandler = (newList) =>{
+    setTodoList(newList)
   }
 
 
   return (
     <Header>
       <TodoInput todoinput={todoListInputHandler} />
-      <UsersTodo usersTodo={todoList} onDelete={deleteItemHandler} />
+      <UsersTodo usersTodo={todoList} onChange={changeTodoListHandler} />
     </Header>
   );
 }

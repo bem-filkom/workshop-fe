@@ -8,14 +8,21 @@ const UsersTodo = (props) => {
 
   const exitPopup = ()=>{
     setPopUp(!popUp);
+    setEditKey("");
   }
 
   const deleteHandler = ()=>{
-    props.onDelete(props.key)
+    const newList = props.usersTodo.filter(x=>x.key !== editKey);
+    props.onChange(newList) 
   }
 
-  const updateListInput = ()=>{
-    
+  const updateListInput =(newList)=>{
+    const index = props.usersTodo.findIndex(x => x.key === editKey);
+    console.log(index)
+    console.log(props.usersTodo[index])
+    props.usersTodo[index] = {todolist: newList, key: editKey}
+    console.log(props.usersTodo[index])
+    props.onChange(props.usersTodo) 
   }
 
   return (
@@ -40,7 +47,7 @@ const UsersTodo = (props) => {
                     name="ellipsis-vertical-outline"
                     onClick={() => {
                       setPopUp(!popUp);
-                      // setEditKey(lists.key);
+                      setEditKey(lists.key);
                     }}
                   ></ion-icon>
                 </div>
