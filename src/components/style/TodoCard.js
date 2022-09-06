@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const TodoCard = (props) => {
+const TodoCard = (props) => {  
 
   return (
     <>

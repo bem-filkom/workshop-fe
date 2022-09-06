@@ -23,10 +23,10 @@ const UsersTodo = (props) => {
     props.onChange(props.usersTodo);
   };
 
-  const checkboxHandler = () => {
-    
-  };
-
+  // const checkboxHandler = () => {
+  //   const checkboxCard = props.usersTodo.filter((x)=>x.key !== checkboxKey);
+  //   props.onChange(checkboxCard);
+  // };
 
   return (
     <>
