@@ -37,12 +37,17 @@ const UsersTodo = (props) => {
       )}
       <div className="flex flex-row justify-evenly overflow-visible todolist overflow-y-scroll">
         <div className="flex flex-col">
+          {props.usersTodo.length == 0 ? (
+            <div></div>
+          ) : (
+            <div className="flex flex-row text-josefin text-2xl font-semibold text-center">
+              <h1 className="relative left-[40%]">ACTIVITIES</h1>
+              <h1 className="relative left-[85%]">DONE</h1>
+            </div>
+          )}
+
           {props.usersTodo.map((lists) => (
             <>
-              <div className="flex flex-row text-josefin text-2xl font-semibold text-center">
-                <h1 className="relative left-[40%]">ACTIVITIES</h1>
-                <h1 className="relative left-[85%]">DONE</h1>
-              </div>
               <div className="flex flex-row">
                 <TodoCard
                   key={lists.key}
