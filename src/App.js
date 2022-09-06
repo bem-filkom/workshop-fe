@@ -9,7 +9,7 @@ function App() {
   const todoListInputHandler = (list) => {
     setTodoList(prevList => {
       const updatedTodo = [...prevList];
-      updatedTodo.unshift( { todolist: list, key: Math.random() });
+      updatedTodo.unshift( { todolist: list, key: Math.random().toString() });
       return updatedTodo;
     });
   };

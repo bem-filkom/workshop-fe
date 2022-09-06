@@ -12,26 +12,28 @@ const UsersTodo = (props) => {
     setEditKey("");
   };
 
-  const deleteHandler = () => {
+  const deleteListInput = () => {
     const newList = props.usersTodo.filter((x) => x.key !== editKey);
     props.onChange(newList);
   };
 
   const updateListInput = (newList) => {
     const index = props.usersTodo.findIndex((x) => x.key === editKey);
-    console.log(index);
-    console.log(props.usersTodo[index]);
     props.usersTodo[index] = { todolist: newList, key: editKey };
-    console.log(props.usersTodo[index]);
     props.onChange(props.usersTodo);
   };
+
+  const checkboxHandler = () => {
+    
+  };
+
 
   return (
     <>
       {popUp && (
         <Popup
           onExit={exitPopup}
-          onDeletePopup={deleteHandler}
+          onDelete={deleteListInput}
           onEdit={updateListInput}
         />
       )}
@@ -55,7 +57,7 @@ const UsersTodo = (props) => {
                   checkboxStatus={checkbox}
                 >
                   <ul className="text-poppins">
-                    <li>{lists.todolist}</li>
+                    <li key={lists.key}>{lists.todolist}</li>
                   </ul>
                   <div className="">
                     <ion-icon
@@ -72,6 +74,7 @@ const UsersTodo = (props) => {
                   value="done"
                   className="ml-12 mt-4 w-8 h-8"
                   onClick={() => {
+                    setEditKey(lists.key);
                     setCheckbox(!checkbox);
                   }}
                 ></input>

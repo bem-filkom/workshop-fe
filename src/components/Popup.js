@@ -17,7 +17,7 @@ const Popup = (props) => {
   }
 
   const deleteHandler = () =>{
-    props.onDeletePopup();
+    props.onDelete();
     props.onExit();
   }
 
