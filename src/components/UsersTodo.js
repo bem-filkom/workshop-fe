@@ -11,23 +11,20 @@ const UsersTodo = (props) => {
     setEditKey("");
   }
 
-  const deleteHandler = ()=>{
+  const deleteListInput = ()=>{
     const newList = props.usersTodo.filter(x=>x.key !== editKey);
     props.onChange(newList) 
   }
 
   const updateListInput =(newList)=>{
     const index = props.usersTodo.findIndex(x => x.key === editKey);
-    console.log(index)
-    console.log(props.usersTodo[index])
     props.usersTodo[index] = {todolist: newList, key: editKey}
-    console.log(props.usersTodo[index])
     props.onChange(props.usersTodo) 
   }
 
   return (
     <>
-      {popUp && <Popup onExit={exitPopup} onDeletePopup={deleteHandler} onEdit={updateListInput}/>}
+      {popUp && <Popup onExit={exitPopup} onDelete={deleteListInput} onEdit={updateListInput}/>}
       <div className="flex flex-row justify-evenly overflow-visible todolist overflow-y-scroll">
         <div className="flex flex-col">
           <h1 className="text-josefin text-2xl font-semibold text-center">
