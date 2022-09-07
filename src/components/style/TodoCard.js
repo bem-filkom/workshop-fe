@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const TodoCard = (props) => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(props.isChecked);
   return (
     <>
       <div className="flex flex-row">
@@ -18,8 +18,10 @@ const TodoCard = (props) => {
           type="checkbox"
           value="done"
           className="ml-12 mt-4 w-8 h-8"
-          onClick={() => {
-            setChecked(!checked);
+          defaultChecked={checked}
+          onClick={(e) => {
+            setChecked(e.target.checked);
+            props.onChecked(props.keys, e.target.checked)
           }}
         ></input>
       </div>

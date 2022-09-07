@@ -23,6 +23,14 @@ const UsersTodo = (props) => {
     props.onChange(props.usersTodo);
   };
 
+  const checkedHandler = (key, val) => {
+    const index = props.usersTodo.findIndex((x) => x.key === key);
+    console.log(index)
+    props.usersTodo[index].checked = val;
+    console.log(props.usersTodo)
+    props.onChange(props.usersTodo);
+  };
+
   return (
     <>
       {popUp && (
@@ -46,8 +54,10 @@ const UsersTodo = (props) => {
           {props.usersTodo.map((lists) => (
             <>
                 <TodoCard
-                  key={lists.key}
                   onClick={exitPopup}
+                  onChecked={checkedHandler}
+                  isChecked={lists.checked}
+                  keys={lists.key}
                 >
                   <ul className="text-poppins">
                     <li key={lists.key}>{lists.todolist}</li>
