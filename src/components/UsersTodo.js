@@ -1,3 +1,4 @@
+import { list } from "postcss";
 import React, { useState } from "react";
 import Popup from "./Popup";
 import TodoCard from "./style/TodoCard";
@@ -5,7 +6,6 @@ import TodoCard from "./style/TodoCard";
 const UsersTodo = (props) => {
   const [popUp, setPopUp] = useState(false);
   const [editKey, setEditKey] = useState("");
-  const [checkbox, setCheckbox] = useState(false);
 
   const exitPopup = () => {
     setPopUp(!popUp);
@@ -19,14 +19,17 @@ const UsersTodo = (props) => {
 
   const updateListInput = (newList) => {
     const index = props.usersTodo.findIndex((x) => x.key === editKey);
-    props.usersTodo[index] = { todolist: newList, key: editKey };
+    props.usersTodo[index].todolist = newList;
     props.onChange(props.usersTodo);
   };
 
-  // const checkboxHandler = () => {
-  //   const checkboxCard = props.usersTodo.filter((x)=>x.key !== checkboxKey);
-  //   props.onChange(checkboxCard);
-  // };
+  const checkedHandler = (key, val) => {
+    const index = props.usersTodo.findIndex((x) => x.key === key);
+    console.log(index)
+    props.usersTodo[index].checked = val;
+    console.log(props.usersTodo)
+    props.onChange(props.usersTodo);
+  };
 
   return (
     <>
@@ -50,11 +53,11 @@ const UsersTodo = (props) => {
 
           {props.usersTodo.map((lists) => (
             <>
-              <div className="flex flex-row">
                 <TodoCard
-                  key={lists.key}
                   onClick={exitPopup}
-                  checkboxStatus={checkbox}
+                  onChecked={checkedHandler}
+                  isChecked={lists.checked}
+                  keys={lists.key}
                 >
                   <ul className="text-poppins">
                     <li key={lists.key}>{lists.todolist}</li>
@@ -69,16 +72,6 @@ const UsersTodo = (props) => {
                     ></ion-icon>
                   </div>
                 </TodoCard>
-                <input
-                  type="checkbox"
-                  value="done"
-                  className="ml-12 mt-4 w-8 h-8"
-                  onClick={() => {
-                    setEditKey(lists.key);
-                    setCheckbox(!checkbox);
-                  }}
-                ></input>
-              </div>
             </>
           ))}
         </div>
